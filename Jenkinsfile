@@ -3,7 +3,7 @@ pipeline {
     tools {
         jdk 'Java17'
         maven 'maven3'
-    }/*
+    }
     environment {
 	    APP_NAME = "register-app-pipeline"
             RELEASE = "1.0.0"
@@ -12,7 +12,7 @@ pipeline {
             IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
             IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
 	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
-    } */
+    }
     stages{
         stage("Cleanup Workspace"){
                 steps {
@@ -57,7 +57,7 @@ pipeline {
             }
 
         }
-/*
+
         stage("Build & Push Docker Image") {
             steps {
                 script {
@@ -73,7 +73,7 @@ pipeline {
             }
 
        }
-
+/*
        stage("Trivy Scan") {
            steps {
                script {
