@@ -81,7 +81,7 @@ pipeline {
                }
            }
        }
-
+*/
        stage ('Cleanup Artifacts') {
            steps {
                script {
@@ -90,7 +90,7 @@ pipeline {
                }
           }
        }
-
+/*
        stage("Trigger CD Pipeline") {
             steps {
                 script {
